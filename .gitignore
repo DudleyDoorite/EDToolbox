@@ -3,3 +3,8 @@
 ################################################################################
 
 /EDTB_Console/obj/Debug
+/packages/Newtonsoft.Json.11.0.2
+/Journal/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/Journal/obj/Debug/Journal.csproj.CoreCompileInputs.cache
+/Journal/obj/Debug
+/.vs/EDTB/v15

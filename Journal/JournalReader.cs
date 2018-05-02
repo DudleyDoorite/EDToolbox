@@ -136,23 +136,35 @@ namespace Journal
                     break;
 
                 case "materialcollected":
-                    Event_MaterialCollected jsonObj = JsonConvert.DeserializeObject<Event_MaterialCollected>(eventRec);
-                    arg.EventType = JournalEvents.Materials;
-                    bool added = false;
-                    foreach (MatItem item in items)
-                    {
-                        if (item.Name == jsonObj.Name)
-                        {
-                            item.Count += jsonObj.Count;
-                            added = true;
-                        }
-                    }
-                    if (!added)
-                    {
-                        items.Add(new MatItem() { Name = jsonObj.Name, Count = jsonObj.Count , Name_Localised = jsonObj.Name_Localised});
-                    }
+                    //Event_MaterialCollected jsonObj = JsonConvert.DeserializeObject<Event_MaterialCollected>(eventRec);
+                    arg.EventType = JournalEvents.MaterialCollected;
+                    //bool added = false;
+                    //foreach (MatItem item in items)
+                    //{
+                    //    if (item.Name == jsonObj.Name)
+                    //    {
+                    //        item.Count += jsonObj.Count;
+                    //        added = true;
+                    //    }
+                    //}
+                    //if (!added)
+                    //{
+                    //    items.Add(new MatItem() { Name = jsonObj.Name, Count = jsonObj.Count , Name_Localised = jsonObj.Name_Localised});
+                    //}
                     break;
 
+                case "bounty":
+                    //Event_Bounty jsonObj = JsonConvert.DeserializeObject<Event_Bounty>(eventRec);
+                    arg.EventType = JournalEvents.Bounty;
+                    //System.Diagnostics.Debug.WriteLine("\"{0}\"\t{1}", jsonObj.Target, jsonObj.TotalReward);
+
+                    break;
+
+                case "fsdjump":
+                    Event_FSDJump jsonObj = JsonConvert.DeserializeObject<Event_FSDJump>(eventRec);
+                    arg.EventType = JournalEvents.FSDJump;
+
+                    break;
 
                 default:
                     arg.EventType = JournalEvents.Unknown;

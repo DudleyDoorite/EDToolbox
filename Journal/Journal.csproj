@@ -32,7 +32,6 @@
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -45,17 +44,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Events\Encoded.cs" />
+    <Compile Include="Events\Event_Bounty.cs" />
     <Compile Include="Events\Event_Commander.cs" />
     <Compile Include="Events\Event_Fileheader.cs" />
+    <Compile Include="Events\Event_FSDJump.cs" />
     <Compile Include="Events\Event_MaterialCollected.cs" />
     <Compile Include="Events\Event_Materials.cs" />
     <Compile Include="Events\Event_Music.cs" />
+    <Compile Include="Events\Faction.cs" />
     <Compile Include="Events\JournalEventArg.cs" />
     <Compile Include="Events\JournalEvents.cs" />
     <Compile Include="Events\Manufactured.cs" />
     <Compile Include="Events\MaterialTypes.cs" />
     <Compile Include="Events\MatItem.cs" />
+    <Compile Include="Events\PendingState.cs" />
     <Compile Include="Events\Raw.cs" />
+    <Compile Include="Events\RecoveringState.cs" />
+    <Compile Include="Events\Reward.cs" />
     <Compile Include="JournalReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
